@@ -28,7 +28,7 @@ class ItemsTab(BaseMethods):
             self.wait_for_clickability(self.items_tab_button, 15)
         except TimeoutException:
             return Err(["AK", "PC product not found", "YES", "", "", ""])
-        return Ok[None]
+        return Ok(None)
 
     def _get_all_sizes_from_page(self) -> dict:
         sizes_pc = {}
